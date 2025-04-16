@@ -1,10 +1,12 @@
     //Elementos
     const emailInput = document.querySelector("#email");
+    const emailValue = document.querySelector('#email').value;
     const message = document.querySelector("#error");
     const form = document.querySelector("#emailForm");
+    const button = document.querySelector('#submit');
    
     //evento q controla/ativa aoós a submissão do form    
-    form.addEventListener("submit", function(event){
+    button.addEventListener("click", function(event){
         event.preventDefault();
         //Executar depois da validação do email
 
@@ -14,7 +16,7 @@
         
 
         //validar email
-        const isValid = validateEmail(email);
+        let isValid = validadeEmail(email);
 
         if(isValid){
             message.textContent = "E-mail válido!!!!!!!!!";
@@ -28,7 +30,7 @@
 
     //função de validação de email
 
-    const validadeEmail = (email) => {
+    function validadeEmail(email){
         // Padrão: TEXTO@TEXTO.TEXTO
         const regex = /^[^\s]+@[^\s]+\.[^\s]+$/;
         return regex.test(email);

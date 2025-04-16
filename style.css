@@ -83,6 +83,7 @@
         font-size: 1.2rem;
         padding-left: 50px;
         font-family: "Josefin Sans";
+        border: solid 2px hsl(0, 100%, 98%);
     }
     #submit{
         width: 120px;
@@ -91,22 +92,27 @@
         cursor: pointer;
         border: 0;
         background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+        transition: all 0.2s;
         
-
     }
     #submit:hover{
         background: linear-gradient(135deg, hsl(0, 79%, 91%), hsl(0, 100%, 86%));
+        transition: all 0.2s;
     }
     #forms{
         display: flex;
         width: auto;
         flex-direction: column;
+        gap: 10px;
 
     }
     #error{
         font-family: "Josefin Sans";
         font-size: 1rem;
         color:  hsl(0, 93%, 68%);
+    }
+    #divmensage{
+        margin-left: 20px
     }
 
 
