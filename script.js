@@ -4,7 +4,7 @@
     const message = document.querySelector("#error");
     const form = document.querySelector("#emailForm");
     const button = document.querySelector('#submit');
-   
+    const style = document.querySelector('style');
     //evento q controla/ativa aoós a submissão do form    
     button.addEventListener("click", function(event){
         event.preventDefault();
@@ -22,9 +22,18 @@
             message.textContent = "E-mail válido!!!!!!!!!";
             message.style.color = "green";
         }else{
-            message.textContent = "E-mail inválido!!!!!!!!!";
+            message.textContent = "E-mail inválido !!!!!!!!! imbecil";
             message.style.color = "red";
+            style.textContent += `
+            
+
+
+
+
+            `;
+
         }
+
     })
     
 

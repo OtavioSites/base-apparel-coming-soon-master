@@ -84,13 +84,28 @@
         padding-left: 50px;
         font-family: "Josefin Sans";
         border: solid 2px hsl(0, 7%, 63%);
-    &::-moz-focus-inner{
-        border: solid 2px hsl(0, 7%, 63%);
+        padding-right: 200px;
+        &:user-invalid{
+            border: solid 2px hsl(0, 100%, 51%);
+        }
+        
+
     }
-    
+    #email::before{
+        content: "";
+        width: 500px;
+        background-color: blueviolet;
+        height: 100px;
+        z-index: 123333;
     }
     #email:focus{
+        border-image: none;
+        outline: none;
         border: solid 2px hsl(0, 7%, 63%);
+    }
+    #errorIcon{
+        position: relative;
+        left: 100px;
     }
     
     #submit{
